@@ -1,0 +1,4 @@
+~tripe==2.55.0
+~jango==3.1.1
+Django==3.1.3
+stripe==2.55.0
