@@ -1,8 +1,9 @@
 from django.db import models
 from django.urls import reverse
 
-
 # Model: Category
+
+
 class Category(models.Model):
     name = models.CharField(max_length=250, unique=True)
     slug = models.SlugField(max_length=250, unique=True)
@@ -18,7 +19,7 @@ class Category(models.Model):
         return reverse('products_by_category', args=[self.slug])
 
     def __str__(self):
-        return self.name
+        return str(self.name)
 
 
 # Model: Product
@@ -43,7 +44,7 @@ class Product(models.Model):
         return reverse('product_detail', args=[self.category.slug, self.slug])
 
     def __str__(self):
-        return self.name
+        return str(self.name)
 
 
 # Model: Cart
@@ -56,7 +57,7 @@ class Cart(models.Model):
         ordering = ['date_added']
 
     def __str__(self):
-        return self.cart_id
+        return str(self.cart_id)
 
 
 class CartItem(models.Model):
@@ -72,7 +73,7 @@ class CartItem(models.Model):
         return self.product.price * self.quantity
 
     def __str__(self):
-        return self.product
+        return str(self.product)
 
 
 # Model: Order
@@ -116,4 +117,4 @@ class OrderItem(models.Model):
         return self.quantity * self.price
 
     def __str__(self):
-        return self.product
+        return str(self.product)

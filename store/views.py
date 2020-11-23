@@ -24,6 +24,14 @@ def home(request, category_slug=None):
     return render(request, 'home.html', {'category': category_page, 'products': products})
 
 
+def contactus(request):
+    return render(request, 'contactus.html')
+
+
+def aboutus(request):
+    return render(request, 'aboutus.html')
+
+
 def productPage(request, category_slug, product_slug):
     try:
         product = Product.objects.get(
