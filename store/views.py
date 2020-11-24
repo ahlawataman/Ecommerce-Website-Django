@@ -38,7 +38,18 @@ def productPage(request, category_slug, product_slug):
             category__slug=category_slug, slug=product_slug)
     except Exception as e:
         raise e
-    return render(request, 'product.html', {'product': product})
+    listProduct = []
+    listProduct.append(product.descriptionLine1)
+    listProduct.append(product.descriptionLine2)
+    listProduct.append(product.descriptionLine3)
+    listProduct.append(product.descriptionLine4)
+    listProduct.append(product.descriptionLine5)
+    listProduct.append(product.descriptionLine6)
+    listProduct.append(product.descriptionLine7)
+    listProduct.append(product.descriptionLine8)
+    listProduct.append(product.descriptionLine9)
+    listProduct.append(product.descriptionLine10)
+    return render(request, 'product.html', {'product': product, 'listProduct': listProduct})
 
 
 def _cart_id(request):

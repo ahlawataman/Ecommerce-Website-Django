@@ -17,7 +17,15 @@ Product
                     <span class="mr-1">$</span>{{product.price}}
                 </h5>
                 <p class="product_description">Product Description</p>
-                <p class="text-justify product_text">{{product.description}}</p>
+                <ul style="line-height:100%">
+                    {% for descrip in listProduct %}
+                    {% if descrip != "" %}
+                    <li>
+                        <p class="text-justify product_text">{{descrip}}</p>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
                 {% if product.stock <= 0 %}
                 <p class="text-justify product_text"><b>Out of Stock</b></p>
                 {% else %}

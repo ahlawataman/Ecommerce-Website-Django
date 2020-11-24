@@ -26,7 +26,17 @@ class Category(models.Model):
 class Product(models.Model):
     name = models.CharField(max_length=250, unique=True)
     slug = models.SlugField(max_length=250, unique=True)
-    description = models.TextField(blank=True)
+    description = []
+    descriptionLine1 = models.TextField(blank=True)
+    descriptionLine2 = models.TextField(blank=True)
+    descriptionLine3 = models.TextField(blank=True)
+    descriptionLine4 = models.TextField(blank=True)
+    descriptionLine5 = models.TextField(blank=True)
+    descriptionLine6 = models.TextField(blank=True)
+    descriptionLine7 = models.TextField(blank=True)
+    descriptionLine8 = models.TextField(blank=True)
+    descriptionLine9 = models.TextField(blank=True)
+    descriptionLine10 = models.TextField(blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     image = models.ImageField(upload_to='product', blank=True)
