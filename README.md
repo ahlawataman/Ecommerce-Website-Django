@@ -2,7 +2,7 @@
  
 ## Summary
 
-We developed an end to end **Ecommerce Web Application using Django** with multiple modules. This is free. Anybody can use and moderate this project.
+An end to end **Ecommerce Web Application using Django** with multiple modules. This is free. Anybody can use and moderate this project.
 
 ## Platform Used
 
