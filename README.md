@@ -34,7 +34,7 @@ We developed an end to end **Ecommerce Web Application using Django** with multi
 * Monitor Orders
 
 ### Store HomePage
-![home](https://i.imgur.com/jORNbODl.png)
+<img src="https://i.imgur.com/jORNbODl.png" data-canonical-src="https://i.imgur.com/jORNbODl.png" width="480" height="270" /> 
 
 ### NavBar
 ![category](https://i.imgur.com/v6PZUhLm.png) ![signinout](https://i.imgur.com/7CTwbeSb.png) ![search](https://i.imgur.com/8UC0xtTm.png)
